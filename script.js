@@ -85,12 +85,13 @@ const projects = [
         "https://thaua23.github.io/THaua23-THaua23-Landing-page-Newslatter/",
         "https://thaua23.github.io/Sistema-Mercado/",
         "https://thaua23.github.io/SCM/",
-        "https://thaua23.github.io/form/"
+        "https://thaua23.github.io/refri/"
     ],
     [
         "https://thaua23.github.io/todolist/",
         "https://thaua23.github.io/calculator/",
-        "https://thaua23.github.io/jump/"
+        "https://thaua23.github.io/jump/",
+        "https://thaua23.github.io/form/"
     ]
 ];
 
@@ -162,3 +163,4 @@ botao.addEventListener("click", function () {
   email.value = "";
   mensagem.value = "";
 });
+

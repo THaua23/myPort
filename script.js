@@ -92,7 +92,8 @@ const projects = [
         "https://thaua23.github.io/todolist/",
         "https://thaua23.github.io/calculator/",
         "https://thaua23.github.io/jump/",
-        "https://thaua23.github.io/form/"
+        "https://thaua23.github.io/form/",
+        "https://thaua23.github.io/quiz/"
     ]
 ];
 
@@ -181,4 +182,5 @@ function animaScroll() {
 }
 
 window.addEventListener("scroll", animaScroll)
+
 

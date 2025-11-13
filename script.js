@@ -83,11 +83,12 @@ const projects = [
         "https://thaua23.github.io/THaua23-Starbucks-landing-page/",
         "https://thaua23.github.io/car/",
         "https://thaua23.github.io/THaua23-THaua23-Landing-page-Newslatter/",
-        "https://thaua23.github.io/Sistema-Mercado/",
+        "https://thaua23.github.io/starbucks/",
         "https://thaua23.github.io/SCM/",
         "https://thaua23.github.io/refri/"
     ],
     [
+        "https://thaua23.github.io/Sistema-Mercado/",
         "https://thaua23.github.io/todolist/",
         "https://thaua23.github.io/calculator/",
         "https://thaua23.github.io/jump/",
@@ -163,4 +164,21 @@ botao.addEventListener("click", function () {
   email.value = "";
   mensagem.value = "";
 });
+
+//Scroll animations
+const animaItens = document.querySelectorAll('[data-anima]')
+
+function animaScroll() {
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.75)
+  
+  animaItens.forEach((item) => {
+    if (windowTop > item.offsetTop) {
+      item.classList.add('animar')
+    } else {
+      item.classList.remove('animar')
+    }
+  })
+}
+
+window.addEventListener("scroll", animaScroll)
 

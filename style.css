@@ -33,10 +33,10 @@ main {
 
 #particles-container {
     position: absolute;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 0;
 }
 
@@ -176,6 +176,7 @@ main {
             animation: carrosel  35s linear infinite;
             align-self: flex-start;
 
+            /*? Skills */
             li {
                 background-color: var(--background-color);
                 width: 150px;
@@ -183,6 +184,12 @@ main {
                 border-radius: 5px;
                 font-weight: bold;
                 text-align: center;
+                transition: 0.1s;
+
+                &:hover{
+                    background-color: var(--this-bg-color);
+                    color: var(--this-text-color);
+                }
             }
         }
 
@@ -219,6 +226,7 @@ main {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        user-select: none;
 
         a {
             width: 300px;
@@ -230,9 +238,8 @@ main {
             display: inline-block;
             position: relative;
 
-            &:hover {
-                transform: scale(1.05);
-            }
+            &:hover { transform: scale(1.05); }
+
 
             iframe {
                 width: 1000px;
@@ -254,10 +261,10 @@ main {
 
     #pages {
         text-align: center;
-        margin-top: 20px;
+
         display: flex;
-        justify-content: center;
-        align-items: center;
+        place-content: center;
+        user-select: none;
 
         button {
             background-color: var(--background-color);
@@ -276,9 +283,9 @@ main {
             }
         }
         #page-numbers button.active {
-                background-color: #666666;
-                color: white;
-            }
+            background-color: #666666;
+            color: white;
+        }
     }
 }
 
@@ -394,12 +401,8 @@ main {
     transition: 0.3s;
 }
 
-[data-anima="left"]{
-    transform: translate(-50px);
-}
-[data-anima="right"]{
-    transform: translate(50px);
-}
+[data-anima="left"]{transform: translate(-50px);}
+[data-anima="right"]{transform: translate(50px);}
 
 .animar{
     transform: translate(0);

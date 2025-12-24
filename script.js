@@ -91,9 +91,9 @@ const projects = [
         "https://thaua23.github.io/Sistema-Mercado/",
         "https://thaua23.github.io/todolist/",
         "https://thaua23.github.io/TaskBoard/",
+        "https://thaua23.github.io/calculator/",
         "https://thaua23.github.io/jump/",
-        "https://thaua23.github.io/form/",
-        "https://thaua23.github.io/quiz/"
+        "https://thaua23.github.io/form/"
     ]
 ];
 
@@ -154,34 +154,33 @@ let mensagem = document.getElementById("message");
 let botao = document.getElementById("send-button");
 
 function formatarMensagem() {
-  return `Nome: ${nome.value}%0AEmail: ${email.value}%0AMensagem: ${mensagem.value}`;
+    return `Nome: ${nome.value}%0AEmail: ${email.value}%0AMensagem: ${mensagem.value}`;
 }
 
 botao.addEventListener("click", function () {
-  let linkEmail = "mailto:thaua23sl@gmail.com?subject=Contato%20pelo%20site&body=" + formatarMensagem();
-  window.location.href = linkEmail;
+    let linkEmail = "mailto:thaua23sl@gmail.com?subject=Contato%20pelo%20site&body=" + formatarMensagem();
+    window.location.href = linkEmail;
 
-  nome.value = "";
-  email.value = "";
-  mensagem.value = "";
+    nome.value = "";
+    email.value = "";
+    mensagem.value = "";
 });
 
-//Scroll animations
+//* Scroll animations
+
 const animaItens = document.querySelectorAll('[data-anima]')
 
 function animaScroll() {
-  const windowTop = window.pageYOffset + (window.innerHeight * 0.75)
-  
-  animaItens.forEach((item) => {
-    if (windowTop > item.offsetTop) {
-      item.classList.add('animar')
-    } else {
-      item.classList.remove('animar')
-    }
-  })
+    const windowTop = window.pageYOffset + (window.innerHeight * 0.75)
+
+    animaItens.forEach((item) => {
+        if (windowTop > item.offsetTop) {
+            item.classList.add('animar')
+        } else {
+            item.classList.remove('animar')
+        }
+    })
 }
 
 window.addEventListener("scroll", animaScroll)
-
-
 

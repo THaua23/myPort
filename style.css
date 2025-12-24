@@ -128,7 +128,7 @@ main {
         flex-wrap: wrap;
 
         #about-content {
-            max-width: 600px;
+            max-width: 670px;
             text-align: justify;
 
             h2 {
@@ -173,7 +173,8 @@ main {
             list-style: none;
             display: flex;
             gap: 15px;
-            animation: carrosel 40s linear infinite;
+            animation: carrosel  35s linear infinite;
+            align-self: flex-start;
 
             li {
                 background-color: var(--background-color);
@@ -190,11 +191,11 @@ main {
 
 @keyframes carrosel {
     from {
-        transform: translateX(600px);
+        transform: translateX(0px);
     }
 
     to {
-        transform: translateX(-1200px);
+        transform: translateX(-1485.5px);
     }
 }
 
@@ -364,6 +365,8 @@ main {
         }
     }
 }
+
+
 
 /*?----------------Media---------------------*/
 

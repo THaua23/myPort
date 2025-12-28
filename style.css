@@ -74,19 +74,14 @@ main {
 
     #btn-box {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        place-content: center;
         gap: 20px;
         width: 300px;
 
         a {
             text-decoration: none;
-        }
-
-        button {
             height: 50px;
             padding: 10px;
-            border: none;
             border-radius: 5px;
             background-color: #444444;
             color: white;
@@ -97,16 +92,16 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
 
             &:hover {
                 background-color: #666666;
             }
 
-            svg {
+            #github-icon {
                 width: 30px;
             }
         }
+
     }
 }
 
@@ -128,7 +123,7 @@ main {
         flex-wrap: wrap;
 
         #about-content {
-            max-width: 670px;
+            max-width: 700px;
             text-align: justify;
 
             h2 {
@@ -136,16 +131,17 @@ main {
                 color: white;
             }
 
-            p {
-                color: var(--secondary-text-color);
-                line-height: 1.6;
-            }
-
             hr {
                 margin: 10px 0px 10px 0px;
                 height: 2px;
                 background-color: var(--secondary-text-color);
             }
+
+            p {
+                color: var(--secondary-text-color);
+                line-height: 1.6;
+            }
+
         }
 
         img {
@@ -173,7 +169,7 @@ main {
             list-style: none;
             display: flex;
             gap: 15px;
-            animation: carrosel  35s linear infinite;
+            animation: carrosel 35s linear infinite;
             align-self: flex-start;
 
             /*? Skills */
@@ -186,7 +182,7 @@ main {
                 text-align: center;
                 transition: 0.1s;
 
-                &:hover{
+                &:hover {
                     background-color: var(--this-bg-color);
                     color: var(--this-text-color);
                 }
@@ -238,7 +234,9 @@ main {
             display: inline-block;
             position: relative;
 
-            &:hover { transform: scale(1.05); }
+            &:hover {
+                transform: scale(1.05);
+            }
 
 
             iframe {
@@ -282,6 +280,7 @@ main {
                 color: white;
             }
         }
+
         #page-numbers button.active {
             background-color: #666666;
             color: white;
@@ -309,13 +308,14 @@ main {
         color: var(--secondary-text-color);
     }
 
-    #contact-form{
+    #contact-form {
         display: flex;
         flex-direction: column;
         gap: 15px;
         width: 300px;
 
-        input, textarea {
+        input,
+        textarea {
             padding: 10px;
             border: none;
             border-radius: 5px;
@@ -338,14 +338,6 @@ main {
 
             &:hover {
                 background-color: #0d5880;
-            }
-
-            a{
-                text-decoration: none;
-                color: white;
-                border: none;
-                background: none;
-                cursor: pointer;
             }
         }
     }
@@ -378,16 +370,19 @@ main {
 /*?----------------Media---------------------*/
 
 @media (max-width: 768px) {
-    #main-section h1{
+    #main-section h1 {
         font-size: 30px;
     }
+
     h2 {
         font-size: 28px;
     }
-    p{
+
+    p {
         font-size: 14px;
     }
-    #contact-section #contact-form{
+
+    #contact-section #contact-form {
         width: 100%;
     }
 }
@@ -396,16 +391,20 @@ main {
 
 /*? animação*/
 
-[data-anima]{
+[data-anima] {
     opacity: 0;
     transition: 0.3s;
 }
 
-[data-anima="left"]{transform: translate(-50px);}
-[data-anima="right"]{transform: translate(50px);}
+[data-anima="left"] {
+    transform: translate(-50px);
+}
 
-.animar{
+[data-anima="right"] {
+    transform: translate(50px);
+}
+
+.animar {
     transform: translate(0);
     opacity: 1;
 }
-

@@ -159,12 +159,20 @@ function formatarMensagem() {
 
 botao.addEventListener("click", function () {
     let linkEmail = "mailto:thaua23sl@gmail.com?subject=Contato%20pelo%20site&body=" + formatarMensagem();
-    window.location.href = linkEmail;
 
-    nome.value = "";
-    email.value = "";
-    mensagem.value = "";
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+
+    if (nome.value.trim() !== '' && email.value.trim() !== '' && emailValido) {
+        window.location.href = linkEmail;
+        [nome, email, mensagem].forEach(campo => campo.value = "");
+    } else {
+        [nome, email, mensagem].forEach(campo => campo.style.border = "1px solid red");
+        setTimeout(() => {
+            [nome, email, mensagem].forEach(campo => campo.style.border = "none");
+        }, 1000);
+    }
 });
+
 
 //* Scroll animations
 

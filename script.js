@@ -1,34 +1,28 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    // Detecta se a tela é 4K ou maior
+    const is4K = window.innerWidth >= 3840;
+
     tsParticles.load("particles-container", {
         fpsLimit: 60,
         interactivity: {
             events: {
                 onHover: {
                     enable: true,
-                    mode: "repulse", // Partículas fogem do mouse
+                    mode: "repulse",
                 },
                 onClick: {
                     enable: false,
-                    mode: "push", // Adiciona partículas ao clicar
+                    mode: "push",
                 },
                 resize: true,
             },
             modes: {
-                push: {
-                    quantity: 4,
-                },
-                repulse: {
-                    distance: 100,
-                    duration: 0.4,
-                },
+                push: { quantity: 4 },
+                repulse: { distance: 100, duration: 0.4 },
             },
         },
         particles: {
-            // Cor das partículas (combinando com seu --primary-text-color)
-            color: {
-                value: "#ffffff",
-            },
-            // Linhas que conectam as partículas (combinando com seu --secondary-text-color)
+            color: { value: "#ffffff" },
             links: {
                 color: "#a1a1a1",
                 distance: 150,
@@ -36,39 +30,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 opacity: 0.4,
                 width: 1,
             },
-            collisions: {
-                enable: true,
-            },
+            collisions: { enable: true },
             move: {
                 direction: "none",
                 enable: true,
-                outModes: {
-                    default: "bounce",
-                },
+                outModes: { default: "bounce" },
                 random: false,
-                speed: 1, // Velocidade
+                speed: 1,
                 straight: false,
             },
             number: {
-                density: {
-                    enable: true,
-                    area: 800,
-                },
-                value: 80, // Quantidade de partículas
+                density: { enable: true, area: 800 },
+                value: is4K ? 40 : 80, // menos partículas em 4K
             },
-            opacity: {
-                value: 0.5,
-            },
-            shape: {
-                type: "circle",
-            },
+            opacity: { value: 0.5 },
+            shape: { type: "circle" },
             size: {
-                value: { min: 1, max: 5 },
+                value: is4K ? { min: 1, max: 3 } : { min: 1, max: 5 }, // partículas menores em 4K
             },
         },
         detectRetina: true,
     });
 });
+
 
 //projects slider
 

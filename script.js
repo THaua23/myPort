@@ -78,6 +78,10 @@ const projects = [
         "https://thaua23.github.io/calculator/",
         "https://thaua23.github.io/jump/",
         "https://thaua23.github.io/form/"
+    ],
+    [
+        "https://thaua23.github.io/voice/",
+        "https://thaua23.github.io/penJS/"
     ]
 ];
 

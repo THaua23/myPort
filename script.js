@@ -162,21 +162,28 @@ botao.addEventListener("click", function () {
 });
 
 
-//* Scroll animations
+//* gsap scroll animations
 
-const animaItens = document.querySelectorAll('[data-anima]')
+const imgProfile = document.getElementById("img-profile")
+const aboutContent = document.getElementById("about-content")
 
-function animaScroll() {
-    const windowTop = window.pageYOffset + (window.innerHeight * 0.75)
+gsap.registerPlugin(ScrollTrigger);
 
-    animaItens.forEach((item) => {
-        if (windowTop > item.offsetTop) {
-            item.classList.add('animar')
-        } else {
-            item.classList.remove('animar')
+
+
+function animar(id, x, start, end) {
+    gsap.from(id, {
+        opacity: 0,
+        x: x,
+        scrollTrigger: {
+            trigger: "#about-section",
+            start: start,
+            end: end,
+            scrub: true,
+            // markers: true
         }
-    })
+    });
 }
-
-window.addEventListener("scroll", animaScroll)
+animar(imgProfile, -50, "top 60%", "top 30%")
+animar(aboutContent, 50, "top 40%", "top 10%")
 

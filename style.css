@@ -149,13 +149,13 @@ main {
 
         }
 
-        img {
-            background-color: var(--primary-color);
+        #img-profile {
             max-width: 300px;
             min-width: 200px;
             border-radius: 10px;
             box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
         }
+
     }
 
     #skills-box {
@@ -203,7 +203,8 @@ main {
     }
 
     to {
-        transform: translateX(-1485.5px);
+        transform: translateX(-50%);
+        /* -1485.5px */
     }
 }
 
@@ -421,25 +422,4 @@ main {
     #contact-section #contact-form {
         width: 90%;
     }
-}
-
-
-/*? animação*/
-
-[data-anima] {
-    opacity: 0;
-    transition: 0.3s;
-}
-
-[data-anima="left"] {
-    transform: translate(-50px);
-}
-
-[data-anima="right"] {
-    transform: translate(50px);
-}
-
-.animar {
-    transform: translate(0);
-    opacity: 1;
 }

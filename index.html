@@ -2,138 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raffael | dev</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/icon-port.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- Importando ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Raffael | dev</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="img/icon-port.svg" type="image/x-icon">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+   <!--gsap lib-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-    <div id="particles-container"></div>
-    <main>
+   <div id="particles-container"></div>
+   <main>
 
-        <section id="main-section">
-            <h1>&lt/Raffael <span>| dev</span>&gt</h1>
-            <p>Programmer dedicated to achieving my goals and meeting your expectations.</p>
-            <div id="btn-box">
-                <a href="components/curriculo_Raffael_Thauã.pdf" download="curriculo_Raffael_Thauã">Download
-                    CV</a>
-                <a href="https://github.com/THaua23" target="_blank"><svg id="github-icon"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="#ffffff"
-                            d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM252.8 8c-138.7 0-244.8 105.3-244.8 244 0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1 100-33.2 167.8-128.1 167.8-239 0-138.7-112.5-244-251.2-244zM105.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                    </svg></a>
+      <section id="main-section">
+         <h1>&lt/Raffael <span>| dev</span>&gt</h1>
+         <p>Programmer dedicated to achieving my goals and meeting your expectations.</p>
+         <div id="btn-box">
+            <a href="components/curriculo_Raffael_Thauã.pdf" download="curriculo_Raffael_Thauã">Download
+               CV</a>
+            <a href="https://github.com/THaua23" target="_blank"><svg id="github-icon"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="#ffffff"
+                     d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM252.8 8c-138.7 0-244.8 105.3-244.8 244 0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1 100-33.2 167.8-128.1 167.8-239 0-138.7-112.5-244-251.2-244zM105.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+               </svg></a>
+         </div>
+      </section>
+
+      <section id="about-section">
+         <div id="about-box">
+            <img src="img/thaua.jpg" alt="Raffael's Profile Picture" id="img-profile">
+            <div id="about-content">
+               <h2>About Me</h2>
+               <hr>
+               <p> Hi! I'm Raffael Thauã, a passionate web developer dedicated to building efficient and innovative
+                  digital solutions. With a strong foundation in technologies like JavaScript, HTML, CSS, and
+                  modern frameworks such as React, Vue.js, and Tailwind, I specialize in transforming complex
+                  ideas
+                  into clean, user-friendly web experiences. <br>
+
+                  My journey in tech is driven by curiosity and a constant desire to grow. I love exploring new
+                  tools, contributing to open-source projects, and tackling challenges that require both
+                  creativity and precision. <br>
+
+                  When I’m not coding, you’ll find me diving into emerging technologies, refining my skills, or
+                  enjoying immersive gaming sessions. Let’s connect and create something amazing on the web!</p>
+               <h2>Education</h2>
+               <hr>
+               <p>I'm currently pursuing a degree in Information Systems at UFPA, where I'm in my second semester.
+                  Alongside my academic journey, I’ve developed a strong and comprehensive skill set in web
+                  development, working with technologies like HTML, CSS, JavaScript, React, Vue.js, and Node.js to
+                  build modern, responsive, and user-focused web applications.</p>
             </div>
-        </section>
+         </div>
 
-        <section id="about-section">
-            <div id="about-box">
-                <img src="img/thaua.jpg" alt="Raffael's Profile Picture" id="img-profile">
-                <div id="about-content">
-                    <h2>About Me</h2>
-                    <hr>
-                    <p> Hi! I'm Raffael Thauã, a passionate web developer dedicated to building efficient and innovative
-                        digital solutions. With a strong foundation in technologies like JavaScript, HTML, CSS, and
-                        modern frameworks such as React, Vue.js, and Tailwind, I specialize in transforming complex
-                        ideas
-                        into clean, user-friendly web experiences. <br>
+         <div id="skills-box">
+            <h2>Hard Skills</h2>
+            <ul id="skill-list" translate="no">
+               <!-- skills here -->
+            </ul>
+         </div>
+      </section>
 
-                        My journey in tech is driven by curiosity and a constant desire to grow. I love exploring new
-                        tools, contributing to open-source projects, and tackling challenges that require both
-                        creativity and precision. <br>
+      <section id="projects-section">
+         <h2>Projects</h2>
+         <div id="projects-box">
+            <!-- projects here -->
+         </div>
 
-                        When I’m not coding, you’ll find me diving into emerging technologies, refining my skills, or
-                        enjoying immersive gaming sessions. Let’s connect and create something amazing on the web!</p>
-                    <h2>Education</h2>
-                    <hr>
-                    <p>I'm currently pursuing a degree in Information Systems at UFPA, where I'm in my second semester.
-                        Alongside my academic journey, I’ve developed a strong and comprehensive skill set in web
-                        development, working with technologies like HTML, CSS, JavaScript, React, Vue.js, and Node.js to
-                        build modern, responsive, and user-focused web applications.</p>
-                </div>
-            </div>
+         <div id="pages">
+            <button id="prev">
+               < </button>
+                  <div id="page-numbers"></div>
+                  <button id="next">></button>
+         </div>
+      </section>
 
-            <div id="skills-box" translate="no">
-                <h2>Hard Skills</h2>
-                <ul>
-                    <li style="--this-bg-color: #f7df1e; --this-text-color: #111111">JavaScript</li>
-                    <li style="--this-bg-color: #e34c26; --this-text-color: #ffffff">HTML & CSS</li>
-                    <li style="--this-bg-color: #106aa7; --this-text-color: #61dafb">React.js</li>
-                    <li style="--this-bg-color: #42b883; --this-text-color: #35495e">Vue.js</li>
-                    <li style="--this-bg-color: #dd1b16; --this-text-color: #ffffff">Angular.js</li>
-                    <li style="--this-bg-color: #68a063; --this-text-color: #ffffff">Node.js</li>
-                    <li style="--this-bg-color: #38bdf8; --this-text-color: #0f172a">Tailwind</li>
-                    <li style="--this-bg-color: #3776ab; --this-text-color: #ffd43b">Python</li>
-                    <li style="--this-bg-color: #e32c26; --this-text-color: #ffffff">Git & GitHub</li>
-                    <li style="--this-bg-color: #0ae448; --this-text-color: #111111">Gsap</li>
+      <section id="contact-section">
+         <h2>Contact Me</h2>
+         <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
 
-                    <li style="--this-bg-color: #f7df1e; --this-text-color: #111111">JavaScript</li>
-                    <li style="--this-bg-color: #e34c26; --this-text-color: #ffffff">HTML & CSS</li>
-                    <li style="--this-bg-color: #106aa7; --this-text-color: #61dafb">React.js</li>
-                    <li style="--this-bg-color: #42b883; --this-text-color: #35495e">Vue.js</li>
-                    <li style="--this-bg-color: #dd1b16; --this-text-color: #ffffff">Angular.js</li>
-                    <li style="--this-bg-color: #68a063; --this-text-color: #ffffff">Node.js</li>
-                    <li style="--this-bg-color: #38bdf8; --this-text-color: #0f172a">Tailwind</li>
-                    <li style="--this-bg-color: #3776ab; --this-text-color: #ffd43b">Python</li>
-                    <li style="--this-bg-color: #e32c26; --this-text-color: #ffffff">Git & GitHub</li>
-                    <li style="--this-bg-color: #0ae448; --this-text-color: #111111">Gsap</li>
+            <button type="button" id="send-button">
+               <img id="air-plane" src="img/paper-plane.webp">
+               <span>Send Email</span>
+            </button>
+         </form>
 
-                </ul>
-            </div>
-        </section>
+         <div id="social-links">
+            <a href="https://www.instagram.com/th23_dev?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+               target="_blank"><img src="/img/insta.webp" alt="My Instagram"></a>
 
-        <section id="projects-section">
-            <h2>Projects</h2>
-            <div id="projects-box"></div>
+            <a href="https://www.linkedin.com/in/raffael-thau%C3%A3-da-silva-lima-ab697a344/" target="_blank"><img
+                  src="/img/linkedin.webp" alt="My linkdin"></a>
 
-            <div id="pages">
-                <button id="prev">
-                    < </button>
-                        <div id="page-numbers"></div>
-                        <button id="next">></button>
-            </div>
-        </section>
+            <a href="https://wa.me/5591984750946" target="_blank"><img src="/img/zapp.webp" alt="My WhatsApp"></a>
+         </div>
+      </section>
 
-        <section id="contact-section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="button" id="send-button">
-                    <img id="air-plane" src="img/paper-plane.webp">
-                    <span>Send Email</span>
-                </button>
-            </form>
+   </main>
 
-            <div id="social-links">
-                <a href="https://www.instagram.com/th23_dev?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                    target="_blank"><img
-                        src="https://static.vecteezy.com/system/resources/previews/046/853/013/non_2x/instagram-logo-icon-transparent-background-free-png.png"
-                        alt="My Instagram"></a>
-                <a href="https://www.linkedin.com/in/raffael-thau%C3%A3-da-silva-lima-ab697a344/" target="_blank"><img
-                        src="https://static.vecteezy.com/system/resources/previews/023/986/926/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png"
-                        alt="My linkdin"></a>
-                <a href="https://wa.me/5591984750946" target="_blank"><img
-                        src="https://static.vecteezy.com/system/resources/previews/023/986/550/large_2x/whatsapp-logo-whatsapp-logo-transparent-whatsapp-icon-transparent-free-free-png.png"
-                        alt="My WhatsApp"></a>
-            </div>
-        </section>
+   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
-    <script src="script.js"></script>
+   <script src="script.js"></script>
 
 </html>

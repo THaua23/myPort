@@ -64,76 +64,97 @@ let slideIndex = 0;
 
 const projects = [
    [
-      "https://thaua23.github.io/THaua23-Starbucks-landing-page/",
-      "https://thaua23.github.io/car/",
-      "https://thaua23.github.io/THaua23-THaua23-Landing-page-Newslatter/",
-      "https://thaua23.github.io/starbucks/",
-      "https://thaua23.github.io/SCM/",
-      "https://thaua23.github.io/refri/"
+      { title: 'Starbucks', url: "https://thaua23.github.io/THaua23-Starbucks-landing-page/", tags: ['html', 'css', 'js'] },
+      { title: 'FP Sellection', url: "https://thaua23.github.io/car/", tags: ['html', 'css', 'js'] },
+      { title: 'NewsLatter', url: "https://thaua23.github.io/THaua23-THaua23-Landing-page-Newslatter/", tags: ['html', 'css', 'js'] },
+      { title: 'SCM', url: "https://thaua23.github.io/SCM/", tags: ['html', 'css', 'js'] },
+      { title: 'Starbucks', url: "https://thaua23.github.io/starbucks/", tags: ['html', 'css', 'js'] },
+      { title: 'Refri', url: "https://thaua23.github.io/refri/", tags: ['html', 'css', 'js'] }
    ],
    [
-      "https://thaua23.github.io/Sistema-Mercado/",
-      "https://thaua23.github.io/todolist/",
-      "https://thaua23.github.io/TaskBoard/",
-      "https://thaua23.github.io/calculator/",
-      "https://thaua23.github.io/jump/",
-      "https://thaua23.github.io/form/"
+      { title: 'Mall System', url: "https://thaua23.github.io/Sistema-Mercado/", tags: ['html', 'css', 'js'] },
+      { title: 'ToDoList', url: "https://thaua23.github.io/todolist/", tags: ['html', 'css', 'js'] },
+      { title: 'TaskBoard', url: "https://thaua23.github.io/TaskBoard/", tags: ['html', 'css', 'js'] },
+      { title: 'calculator', url: "https://thaua23.github.io/calculator/", tags: ['html', 'css', 'js'] },
+      { title: 'jump', url: "https://thaua23.github.io/jump/", tags: ['html', 'css', 'js'] },
+      { title: 'form', url: "https://thaua23.github.io/form/", tags: ['html', 'css'] }
    ],
    [
-      "https://thaua23.github.io/voice/",
-      "https://thaua23.github.io/penJS/"
+      { title: 'voice', url: "https://thaua23.github.io/voice/", tags: ['html', 'css', 'js'] },
+      { title: 'penJS', url: "https://thaua23.github.io/penJS/", tags: ['html', 'css', 'js'] }
    ]
 ];
 
 function updateProjects() {
    projectsBox.innerHTML = "";
 
-   projects[slideIndex].forEach(url => {
-      const link = document.createElement("a");
-      link.href = url;
-      link.target = "_blank";
-      link.className = "project-link";
+   projects[slideIndex].forEach(project => {
+      const link = document.createElement("a")
+      link.href = project.url
+      link.target = "_blank"
+      link.className = "project-link"
+      link.setAttribute("translate", "no");
 
-      const iframe = document.createElement("iframe");
-      iframe.src = url;
-      iframe.frameBorder = "0";
+      const iframe = document.createElement("iframe")
+      iframe.src = project.url
 
-      link.appendChild(iframe);
-      projectsBox.appendChild(link);
+      const dataBoard = document.createElement("div")
+      dataBoard.classList.add("data-board")
+
+      const title = document.createElement("h4")
+      title.innerText = project.title
+      dataBoard.appendChild(title)
+
+      const tagBox = document.createElement("div")
+      tagBox.classList.add("tag-box")
+      project.tags.forEach(item => {
+         const tag = document.createElement("span")
+         tag.innerText = item
+
+         tagBox.appendChild(tag)
+      })
+      dataBoard.appendChild(tagBox)
+
+      link.appendChild(iframe)
+      link.appendChild(dataBoard)
+      projectsBox.appendChild(link)
+
+      link.addEventListener('mouseover', () => { dataBoard.classList.add('show-data-board') })
+      link.addEventListener('mouseout', () => { dataBoard.classList.remove('show-data-board') })
    });
 
    updatePageButtons();
 }
 
 function updatePageButtons() {
-   pageNumbers.innerHTML = "";
+   pageNumbers.innerHTML = ""
 
    projects.forEach((_, index) => {
-      const btn = document.createElement("button");
-      btn.textContent = index + 1;
-      btn.className = index === slideIndex ? "active" : "";
+      const btn = document.createElement("button")
+      btn.textContent = index + 1
+      btn.className = index === slideIndex ? "active" : ""
       btn.addEventListener("click", () => {
-         slideIndex = index;
-         updateProjects();
-      });
-      pageNumbers.appendChild(btn);
-   });
+         slideIndex = index
+         updateProjects()
+      })
+      pageNumbers.appendChild(btn)
+   })
 }
 
 nextBtn.addEventListener("click", () => {
    slideIndex = (slideIndex + 1) % projects.length;
    updateProjects();
-});
+})
 
 prevBtn.addEventListener("click", () => {
-   slideIndex = (slideIndex - 1 + projects.length) % projects.length;
-   updateProjects();
-});
+   slideIndex = (slideIndex - 1 + projects.length) % projects.length
+   updateProjects()
+})
 
 // Inicializa
-updateProjects();
+updateProjects()
 
-//* contato
+//* contact
 
 let nome = document.getElementById("name");
 let email = document.getElementById("email");
@@ -153,9 +174,9 @@ botao.addEventListener("click", function () {
       window.location.href = linkEmail;
       [nome, email, mensagem].forEach(campo => campo.value = "");
    } else {
-      [nome, email, mensagem].forEach(campo => campo.style.border = "1px solid red");
+      [nome, email, mensagem].forEach(campo => campo.style.boxShadow = "inset 0px 0px 5px rgb(226, 10, 10)");
       setTimeout(() => {
-         [nome, email, mensagem].forEach(campo => campo.style.border = "none");
+         [nome, email, mensagem].forEach(campo => campo.style.boxShadow = "");
       }, 1000);
    }
 });

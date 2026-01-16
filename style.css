@@ -20,6 +20,7 @@ body {
    height: 100vh;
 }
 
+/* Geral */
 main {
    display: flex;
    flex-direction: column;
@@ -54,7 +55,6 @@ main {
 }
 
 /**-------------------------------------*/
-
 #main-section {
    text-align: center;
    width: 100%;
@@ -222,19 +222,55 @@ main {
       flex-wrap: wrap;
       user-select: none;
       max-width: 1100px;
+      translate: none;
 
-      a {
+      .project-link {
          width: 300px;
          height: 200px;
          border-radius: 5px;
          overflow: hidden;
          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-         transition: transform 0.3s;
          display: inline-block;
          position: relative;
 
-         &:hover {
-            transform: scale(1.05);
+         .data-board {
+            background-color: var(--secondary-background-color);
+            color: var(--primary-color);
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -100%;
+            left: 0px;
+            transition: 0.1s;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            gap: 10px;
+
+            .tag-box {
+               display: flex;
+               width: auto;
+               gap: 10px;
+               flex-wrap: wrap;
+
+               span {
+                  background-color: var(--primary-color);
+                  color: var(--primary-text-color);
+                  text-align: center;
+                  padding: 3px;
+                  border-radius: 50px;
+                  width: auto;
+                  min-width: 40px;
+                  height: auto;
+                  font-size: 12px;
+                  font-weight: bold;
+               }
+            }
+         }
+
+         .show-data-board {
+            bottom: 0%;
          }
 
 
@@ -316,6 +352,7 @@ main {
          color: white;
          font-size: 16px;
          resize: vertical;
+         transition: 0.1s;
       }
 
       button {
@@ -386,7 +423,7 @@ main {
    }
 }
 
-/*?----------------Media---------------------*/
+/*?----------------Media----------------*/
 
 @media (max-width: 768px) {
    #main-section h1 {

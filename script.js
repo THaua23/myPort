@@ -66,37 +66,44 @@ const projects = [
    [
       { title: 'Starbucks', url: "https://thaua23.github.io/THaua23-Starbucks-landing-page/", tags: ['html', 'css', 'js'] },
       { title: 'FP Sellection', url: "https://thaua23.github.io/car/", tags: ['html', 'css', 'js'] },
-      { title: 'NewsLatter', url: "https://thaua23.github.io/THaua23-THaua23-Landing-page-Newslatter/", tags: ['html', 'css', 'js'] },
+      { title: 'CRUD register', thumbnail: 'components/thumbnails/crud.png', url: "https://registrodeempresa.great-site.net/", tags: ['php', 'Sql', 'Bootstrap'] },
       { title: 'SCM', url: "https://thaua23.github.io/SCM/", tags: ['html', 'css', 'js'] },
       { title: 'Starbucks', url: "https://thaua23.github.io/starbucks/", tags: ['html', 'css', 'js'] },
       { title: 'Refri', url: "https://thaua23.github.io/refri/", tags: ['html', 'css', 'js'] }
    ],
    [
       { title: 'Mall System', url: "https://thaua23.github.io/Sistema-Mercado/", tags: ['html', 'css', 'js'] },
-      { title: 'ToDoList', url: "https://thaua23.github.io/todolist/", tags: ['html', 'css', 'js'] },
+      { title: 'NewsLatter', url: "https://thaua23.github.io/THaua23-THaua23-Landing-page-Newslatter/", tags: ['html', 'css', 'js'] },
       { title: 'TaskBoard', url: "https://thaua23.github.io/TaskBoard/", tags: ['html', 'css', 'js'] },
       { title: 'calculator', url: "https://thaua23.github.io/calculator/", tags: ['html', 'css', 'js'] },
-      { title: 'jump', url: "https://thaua23.github.io/jump/", tags: ['html', 'css', 'js'] },
+      { title: 'CommentVue', url: "https://thaua23.github.io/commentVue/", tags: ['html', 'Vue', 'Bootstrap'] },
       { title: 'form', url: "https://thaua23.github.io/form/", tags: ['html', 'css'] }
    ],
    [
       { title: 'voice', url: "https://thaua23.github.io/voice/", tags: ['html', 'css', 'js'] },
+      { title: 'ToDoList', url: "https://thaua23.github.io/todolist/", tags: ['html', 'css', 'js'] },
       { title: 'penJS', url: "https://thaua23.github.io/penJS/", tags: ['html', 'css', 'js'] }
    ]
 ];
 
 function updateProjects() {
-   projectsBox.innerHTML = "";
+   projectsBox.innerHTML = ""
 
    projects[slideIndex].forEach(project => {
       const link = document.createElement("a")
       link.href = project.url
       link.target = "_blank"
       link.className = "project-link"
-      link.setAttribute("translate", "no");
+      link.setAttribute("translate", "no")
 
-      const iframe = document.createElement("iframe")
-      iframe.src = project.url
+      if (project.thumbnail) link.style.backgroundImage = `url('${project.thumbnail}')`
+      else {
+         const iframe = document.createElement("iframe")
+         iframe.src = project.url
+         link.appendChild(iframe)
+      }
+
+
 
       const dataBoard = document.createElement("div")
       dataBoard.classList.add("data-board")
@@ -115,7 +122,6 @@ function updateProjects() {
       })
       dataBoard.appendChild(tagBox)
 
-      link.appendChild(iframe)
       link.appendChild(dataBoard)
       projectsBox.appendChild(link)
 
@@ -168,16 +174,16 @@ function formatarMensagem() {
 botao.addEventListener("click", function () {
    let linkEmail = "mailto:thaua23sl@gmail.com?subject=Contato%20pelo%20site&body=" + formatarMensagem();
 
-   const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+   const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
 
    if (nome.value.trim() !== '' && email.value.trim() !== '' && emailValido) {
       window.location.href = linkEmail;
-      [nome, email, mensagem].forEach(campo => campo.value = "");
+      [nome, email, mensagem].forEach(campo => campo.value = "")
    } else {
-      [nome, email, mensagem].forEach(campo => campo.style.boxShadow = "inset 0px 0px 5px rgb(226, 10, 10)");
+      [nome, email, mensagem].forEach(campo => campo.style.boxShadow = "inset 0px 0px 5px rgb(226, 10, 10)")
       setTimeout(() => {
-         [nome, email, mensagem].forEach(campo => campo.style.boxShadow = "");
-      }, 1000);
+         [nome, email, mensagem].forEach(campo => campo.style.boxShadow = "")
+      }, 1000)
    }
 });
 
@@ -190,6 +196,8 @@ const skills = [
    ['JavaScript', '#f7df1e', '#111111'],
    ['HTML', '#e34c26', '#ffffff'],
    ['CSS', '#9535d4ff', '#300949ff'],
+   ['PHP', '#777BB3', '#393d79'],
+   ['SQL', '#336791', '#ffffff'],
    ['React.js', '#106aa7', '#61dafb'],
    ['Vue.js', '#42b883', '#35495e'],
    ['Angular.js', '#dd1b16', '#ffffff'],
@@ -199,7 +207,7 @@ const skills = [
    ['Git & GitHub', '#e32c26', '#ffffff'],
    ['Gsap', '#0ae448', '#111111'],
    ['Bootstrap', '#9561fb', '#ffffffff']
-];
+]
 
 //mostra duas vezes pro efeito de carrosel infinito
 for (let i = 1; i <= 2; i++) {
@@ -227,7 +235,7 @@ function animate(local, item, x, start, end) {
          scrub: true,
          // markers: true
       }
-   });
+   })
 }
 animate("#about-section", imgProfile, -50, "top 60%", "top 30%")
 animate("#about-section", aboutContent, 50, "top 40%", "top 10%")

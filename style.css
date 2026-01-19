@@ -149,6 +149,10 @@ main {
             line-height: 1.6;
          }
 
+         strong {
+            color: var(--primary-text-color);
+         }
+
       }
 
       #img-profile {
@@ -171,7 +175,7 @@ main {
          list-style: none;
          display: flex;
          gap: 15px;
-         animation: carrosel 40s linear infinite;
+         animation: carrosel 50s linear infinite;
          align-self: flex-start;
 
          /*? Skills */
@@ -232,6 +236,10 @@ main {
          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
          display: inline-block;
          position: relative;
+         background-color: white;
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: center;
 
          .data-board {
             background-color: var(--secondary-background-color);
@@ -242,7 +250,7 @@ main {
             position: absolute;
             bottom: -100%;
             left: 0px;
-            transition: 0.1s;
+            transition: 0.1s ease;
             display: flex;
             flex-direction: column;
             padding: 10px;

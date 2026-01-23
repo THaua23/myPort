@@ -221,13 +221,15 @@ for (let i = 1; i <= 2; i++) {
 
 const imgProfile = document.getElementById("img-profile")
 const aboutContent = document.getElementById("about-content")
+const arrow = document.getElementById("arrow")
 
 gsap.registerPlugin(ScrollTrigger)
 
-function animate(local, item, x, start, end) {
+function animate(local, item,opacity, x, y, start, end) {
    gsap.from(item, {
-      opacity: 0,
+      opacity: opacity,
       x: x,
+      y:y,
       scrollTrigger: {
          trigger: local,
          start: start,
@@ -237,5 +239,16 @@ function animate(local, item, x, start, end) {
       }
    })
 }
-animate("#about-section", imgProfile, -50, "top 60%", "top 30%")
-animate("#about-section", aboutContent, 50, "top 40%", "top 10%")
+animate("#about-section", imgProfile, 0, -50, 0, "top 60%", "top 30%")
+animate("#about-section", aboutContent, 0, 50, 0, "top 40%", "top 10%")
+
+gsap.from(arrow, {
+      opacity: 1,
+      scrollTrigger: {
+         trigger: '#main-section',
+         start: 'top 0%',
+         end: 'bottom 90%',
+         // scrub: true,
+         // markers: true
+      }
+   })

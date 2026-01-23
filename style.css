@@ -64,6 +64,7 @@ main {
    justify-content: center;
    align-items: center;
    gap: 20px;
+   position: relative;
 
    user-select: none;
    -webkit-user-select: none;
@@ -116,8 +117,22 @@ main {
       }
 
    }
-}
 
+   #arrow{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      bottom: 10px;
+      animation: apontar 0.7s linear infinite;
+      rotate: 180deg;
+      opacity: 0;
+   }
+}
+@keyframes apontar {
+   0%{transform: translateY(0px);}
+   50%{transform: translateY(-10px);}
+   100%{transform: translateY(0px);}
+}
 /**-------------------------------------*/
 #about-section {
    background-color: var(--secondary-background-color);
